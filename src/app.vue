@@ -14,9 +14,8 @@
         :data="data"
       />
       <loader
-        v-else
         ref="loader"
-        :data="data"
+        :data="data" v-on:reset="reset"
       />
     </main>
   </div>
@@ -32,13 +31,18 @@ export default {
         loaded: false,
         name: '',
         previousUrl: '',
-        type: '',
+        type: '', 
         url: '',
       },
     };
   },
 
   methods: {
+    reset(){
+      const { editor } = this.$refs;
+      console.log("reset")
+      editor.reset()
+      },
     change(action) {
       const { editor } = this.$refs;
 

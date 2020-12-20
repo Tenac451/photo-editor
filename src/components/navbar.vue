@@ -93,6 +93,7 @@ export default {
 </script>
 
 <style scoped>
+
 .navbar {
   float: right;
 }
@@ -109,15 +110,17 @@ export default {
   text-align: center;
   width: 3rem;
 
-  &:focus {
+  }
+
+.nav__button:focus {
     outline: none;
   }
 
-  &:hover {
+
+.nav__button:hover {
     background-color: #0074d9;
     color: #fff;
   }
-}
 
 .nav--success:hover {
   background-color: #2ecc40;
